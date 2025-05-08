@@ -1,37 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<title>Barbearia Alura</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Alura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Barbearia Alura</a>
+        </div>
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu">
+            <a href="#sobre-section">Sobre</a>
+            <a href="#servicos-section">Serviços</a>
+            <a href="#galeria-section">Galeria</a>
+            <a href="#agendamento-section">Agendamento</a>
+            <a href="#beneficios-section">Benefícios</a>
+            <a href="#contato-section">Contato</a>
+            <a href="#Barbearia">Topo</a>
+            <a href="site1.0.html" target="_blank" class="no-scroll">Site 1.0</a>
+            <button class="toggle-mode" onclick="toggleMode()">🌙 / ☀️</button>
+        </div>
+    </nav>
 
-	<body>
-		<header>
-			<h1 class="titulo-principal">Barbearia Alura</h1>
-		</header>
-		<img id="banner" src="banner.jpg">
-		<div class="principal">
-			<h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
-	 
-			<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+    <header class="parallax">
+        <h1 id="Barbearia" class="titulo-principal">Barbearia Alura</h1>
+        <p class="subtitulo-principal"><span id="typed-text"></span></p>
+    </header>
 
-			<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+    <img id="banner" src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg" alt="Banner da Barbearia" onerror="this.src='https://via.placeholder.com/1200x400?text=Banner+Barbearia'">
 
-			<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-		</div>
+    <div id="sobre-section" class="principal secao-animada">
+        <h2 class="titulo-centralizado"><i class="fas fa-info-circle icon-secao"></i> Sobre a Barbearia Alura</h2>
+        <div class="sobre-content">
+            <p>Localizada no coração de São José dos Pinhais, a <strong>Barbearia Alura</strong> é mais do que um simples local para cuidar do visual. Somos um espaço de convívio, onde a tradição da barbearia clássica encontra a modernidade dos melhores tratamentos capilares e de barba.</p>
+            <p>Fundada em 2019 por entusiastas da arte de barbear, nossa jornada começou com a paixão por proporcionar aos clientes uma experiência única. Desde então, construímos uma reputação baseada na excelência dos nossos serviços, na qualidade dos nossos produtos e, principalmente, no atendimento atencioso e personalizado.</p>
+            <p id="missao"><i class="fas fa-bullseye icon-destaque"></i> <em>Nossa missão é: <strong>"Elevar a auto-estima e o bem-estar de nossos clientes, oferecendo serviços de alta qualidade em um ambiente acolhedor e inspirador."</strong></em></p>
+            <p>Nossos barbeiros são profissionais experientes e apaixonados pelo que fazem, sempre atualizados com as últimas tendências e técnicas. Utilizamos produtos de marcas renomadas para garantir resultados impecáveis e a satisfação total de cada cliente.</p>
+        </div>
+    </div>
 
-		<div class="beneficios">
-			<h3 class="titulo-centralizado">Benefícios</h3>
+    <div id="servicos-section" class="principal secao-animada servicos">
+        <h2 class="titulo-centralizado"><i class="fas fa-cut icon-secao"></i> Nossos Serviços</h2>
+        <div class="lista-servicos">
+            <div class="item-servico tilt-card">
+                <i class="fas fa-scissors icon-servico"></i>
+                <h3>Corte de Cabelo Masculino</h3>
+                <p>Desde os cortes clássicos até os estilos mais modernos e arrojados.</p>
+            </div>
+            <div class="item-servico tilt-card">
+                <i class="fas fa-beard icon-servico"></i>
+                <h3>Barba e Bigode</h3>
+                <p>Modelagem, alinhamento, tratamento e remoção com precisão e cuidado.</p>
+            </div>
+            <div class="item-servico tilt-card">
+                <i class="fas fa-hot-tub icon-servico"></i>
+                <h3>Tratamentos Capilares</h3>
+                <p>Hidratação profunda, revitalização, tratamento anti-queda e muito mais.</p>
+            </div>
+            <div class="item-servico tilt-card">
+                <i class="fas fa-face-shimmer icon-servico"></i>
+                <h3>Design de Sobrancelhas Masculino</h3>
+                <p>Para um olhar mais definido e harmonioso.</p>
+            </div>
+            <div class="item-servico tilt-card">
+                <i class="fas fa-hand-sparkles icon-servico"></i>
+                <h3>Relaxamento Capilar</h3>
+                <p>Para um cabelo mais maleável e com menos frizz.</p>
+            </div>
+            <div class="item-servico tilt-card">
+                <i class="fas fa-paint-roller icon-servico"></i>
+                <h3>Coloração Masculina</h3>
+                <p>Cobertura de brancos, reflexos e mudanças de visual com naturalidade.</p>
+            </div>
+        </div>
+    </div>
 
-			<ul>
-				<li class="itens">Atendimento aos Clientes</li>
-				<li class="itens">Espaço diferenciado</li>
-				<li class="itens">Localização</li>
-				<li class="itens">Profissionais Qualificados</li>
-			</ul>
+    <div id="galeria-section" class="principal secao-animada galeria">
+        <h2 class="titulo-centralizado"><i class="fas fa-camera icon-secao"></i> Galeria</h2>
+        <div class="galeria-grid">
+            <div class="galeria-item"><img src="https://images.pexels.com/photos/3998429/pexels-photo-3998429.jpeg" alt="Barber Shop Interior" onerror="this.src='https://via.placeholder.com/200?text=Galeria+1'"></div>
+            <div class="galeria-item"><img src="https://images.pexels.com/photos/897271/pexels-photo-897271.jpeg" alt="Barber Cutting Hair" onerror="this.src='https://via.placeholder.com/200?text=Galeria+2'"></div>
+            <div class="galeria-item"><img src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg" alt="Barber Tools" onerror="this.src='https://via.placeholder.com/200?text=Galeria+3'"></div>
+            <div class="galeria-item"><img src="https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg" alt="Barber Chair" onerror="this.src='https://via.placeholder.com/200?text=Galeria+4'"></div>
+            <div class="galeria-item"><img src="https://images.pexels.com/photos/3782824/pexels-photo-3782824.jpeg" alt="Barber at Work" onerror="this.src='https://via.placeholder.com/200?text=Galeria+5'"></div>
+            <div class="galeria-item"><img src="https://images.pexels.com/photos/3345876/pexels-photo-3345876.jpeg" alt="Barber Shop Vibe" onerror="this.src='https://via.placeholder.com/200?text=Galeria+6'"></div>
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox" onclick="closeLightbox()">×</span>
+            <img id="lightbox-img" src="" alt="Lightbox Image">
+        </div>
+    </div>
 
-			<img src="beneficios.jpg" class="imagembeneficios">
-		</div>
-	</body>
+    <div id="agendamento-section" class="principal secao-animada agendamento">
+        <h2 class="titulo-centralizado"><i class="far fa-calendar-alt icon-secao"></i> Agende seu Horário</h2>
+        <p class="texto-agendamento">Pensando na sua comodidade, oferecemos diversas formas de agendamento. Escolha a que melhor se adapta à sua rotina:</p>
+        <div class="opcoes-agendamento">
+            <div class="opcao-agendamento tilt-card">
+                <i class="fas fa-whatsapp icon-agendamento"></i>
+                <p><strong>WhatsApp:</strong> Entre em contato pelo nosso número e agende seu horário de forma rápida e fácil.</p>
+                <a href="https://wa.me/5541999999999" target="_blank">Agendar via WhatsApp</a>
+            </div>
+            <div class="opcao-agendamento tilt-card">
+                <i class="fas fa-phone-alt icon-agendamento"></i>
+                <p><strong>Telefone:</strong> Ligue para nossa barbearia e converse diretamente com um de nossos atendentes.</p>
+                <p>Telefone: (41) 9999-9999</p>
+            </div>
+            <div class="opcao-agendamento tilt-card">
+                <i class="far fa-clock icon-agendamento"></i>
+                <p><strong>Online:</strong> Em breve, você poderá agendar seus serviços diretamente pelo nosso website!</p>
+                <p class="em-breve">Em Breve</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="beneficios-section" class="beneficios secao-animada">
+        <h2 class="titulo-centralizado"><i class="fas fa-award icon-secao"></i> Nossos Benefícios</h2>
+        <ul class="lista-beneficios">
+            <li class="item-beneficio tilt-card"><i class="fas fa-user-tie icon-beneficio"></i> Profissionais altamente qualificados e experientes.</li>
+            <li class="item-beneficio tilt-card"><i class="fas fa-chair icon-beneficio"></i> Ambiente moderno, confortável e acolhedor.</li>
+            <li class="item-beneficio tilt-card"><i class="fas fa-map-marker-alt icon-beneficio"></i> Localização privilegiada no centro da cidade.</li>
+            <li class="item-beneficio tilt-card"><i class="fas fa-coffee icon-beneficio"></i> Wi-fi gratuito e um delicioso café enquanto você espera.</li>
+            <li class="item-beneficio tilt-card"><i class="fas fa-star-half-alt icon-beneficio"></i> Produtos de alta qualidade para os melhores resultados.</li>
+            <li class="item-beneficio tilt-card"><i class="fas fa-smile-beam icon-beneficio"></i> Atendimento personalizado focado na sua satisfação.</li>
+        </ul>
+        <img src="https://images.pexels.com/photos/3782825/pexels-photo-3782825.jpeg" class="imagembeneficios" alt="Imagem de Benefícios" onerror="this.src='https://via.placeholder.com/500?text=Beneficios'">
+    </div>
+
+    <div id="contato-section" class="principal secao-animada contato">
+        <h2 class="titulo-centralizado"><i class="fas fa-envelope icon-secao"></i> Entre em Contato</h2>
+        <p class="texto-contato">Estamos sempre prontos para atender! Utilize os canais abaixo para tirar suas dúvidas, fazer sugestões ou agendar seu horário:</p>
+        <div class="info-contato">
+            <p><i class="fas fa-phone-alt icon-contato"></i> <strong>Telefone:</strong> (41) 9999-9999</p>
+            <p><i class="fas fa-envelope icon-contato"></i> <strong>Email:</strong> contato@barbeariaalura.com.br</p>
+            <p><i class="fas fa-map-marker-alt icon-contato"></i> <strong>Endereço:</strong> Rua Exemplo, 123 - Centro, São José dos Pinhais - PR</p>
+        </div>
+        <div class="redes-sociais">
+            <h3>Siga-nos nas redes sociais:</h3>
+            <a href="https://www.facebook.com/BarbeariaAluraOficial" target="_blank" class="social-icon"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/barbeariaalura" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-footer">
+            <div class="info">
+                <p><strong>Gusmares © 2025</strong></p>
+                <p>Código com propósito. Design com identidade.</p>
+            </div>
+            <div class="links">
+                <a href="https://github.com/Gusmares" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:gustavocg2107@gmail.com"><i class="fas fa-envelope"></i> Contato</a>
+            </div>
+            <div class="frase">
+                <p>“O silêncio é o verdadeiro som da estratégia.”</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
